@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
 
 
   const marketSchedule = [  
@@ -42,12 +44,18 @@ import React from 'react';
 function Schedule(props) {
   return (
     <React.Fragment>
-      <p>Market Location: {marketSchedule[props.day].location}<br/>
-      Hours: {marketSchedule[props.day].hours}<br/>
-      Booth: {marketSchedule[props.day].booth}</p>
+        <p><b>Market Location:</b> {marketSchedule[props.day].location}<br/>
+           <b>Hours:</b> {marketSchedule[props.day].hours}<br/>
+           <b>Booth:</b> {marketSchedule[props.day].booth}</p>
+
 
     </React.Fragment>
   );
 }
+
+Schedule.propTypes = {
+   day: PropTypes.number
+};
+
 
 export default Schedule;

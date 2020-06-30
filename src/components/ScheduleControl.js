@@ -1,5 +1,6 @@
 import React from 'react';
-import Schedule from './Schedule'
+import Schedule from './Schedule';
+import farm from "../img/farm.jpg";
 
 class ScheduleControl extends React.Component {
   constructor(props)
@@ -18,8 +19,8 @@ class ScheduleControl extends React.Component {
   render(){
     return(
       <React.Fragment>
-        <div>
-        <h2>Farmer's Market Schedule by Week Day</h2>
+        <h2 id="Header">Farmer's Market Schedule by Week Day</h2>
+        <div class="SelectBox">
           <select value={this.state.day} onChange={this.handleChange}>
             <option selected value = "0">Sunday</option>
             <option value="1">Monday</option>
@@ -29,8 +30,11 @@ class ScheduleControl extends React.Component {
             <option value="5">Saturday</option>
           </select>
         </div>
-        <Schedule 
-          day={parseInt(this.state.day)}/>
+        <img class="farmPic" src={farm}/>
+        <div class="Schedule">
+          <Schedule 
+            day={parseInt(this.state.day)}/>
+        </div>
       </React.Fragment>
     )   
   }

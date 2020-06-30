@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const availableProduce = [  
   {  
@@ -271,11 +272,10 @@ const availableProduce = [
 
 function Produce(props) {
   let monthsProduce = availableProduce[props.month].selection;
-  console.log(monthsProduce)
   return (
     <React.Fragment>
-      <p>Month: {availableProduce[props.month].month}<br /></p>
-      Crops: 
+      <p><b>Month:</b> {availableProduce[props.month].month}<br /></p>
+      <b>Crops:</b>
       <ul>
         {monthsProduce.map((element) => <li>{element}</li> )}
       </ul>
@@ -283,8 +283,9 @@ function Produce(props) {
   );
 }
 
+Produce.propTypes = {
+  month: PropTypes.number
+};
+
 export default Produce;
 
-// selection.forEach(selection => {
-//   <ul>{selection}</ul>
-// })

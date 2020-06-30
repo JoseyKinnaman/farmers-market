@@ -17,7 +17,7 @@ class ProduceControl extends React.Component
   render(){
     return(
       <React.Fragment>
-        <div>
+        <div class="ProduceControl">
         <h2>Avery's Produce by Month</h2>
           <select value={this.state.month} onChange={this.handleChange}>
             <option selected value = "0">January</option>

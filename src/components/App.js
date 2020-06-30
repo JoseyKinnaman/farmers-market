@@ -9,8 +9,12 @@ function App() {
   return (
     <React.Fragment>
       <Header/>
+      <div class="ScheduleParent">
       <ScheduleControl />
+      </div>
+      <div class= "ProduceParent">
       <ProduceControl/>
+      </div>
     </React.Fragment>
   );
 }
