@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Schedule(props){
+
   const marketSchedule = [  
     {  
        day: "Sunday",
@@ -39,44 +39,15 @@ function Schedule(props){
        booth: "9G"
     }
   ]
+function Schedule(props) {
   return (
     <React.Fragment>
-      <p>Market Location: {marketSchedule[0].location}<br/>
-      Hours: {marketSchedule[0].hours}<br/>
-      Booth: {marketSchedule[0].booth}</p>
+      <p>Market Location: {marketSchedule[props.day].location}<br/>
+      Hours: {marketSchedule[props.day].hours}<br/>
+      Booth: {marketSchedule[props.day].booth}</p>
+
     </React.Fragment>
   );
 }
 
 export default Schedule;
-
-
-// function Ticket(props){
-//   return (
-//     <React.Fragment>
-//       <h3>{props.location} - {props.names}</h3>
-//       <p><em>{props.issue}</em></p>
-//       <hr />
-//     </React.Fragment>
-//   );
-// }
-
-// function MarketScheduleList() {
-
-//   return (
-//     <div style={scheduleStyle}>
-//       {marketScheduleList.map((marketSchedule, index) =>
-//         <MarketSchedule day={marketSchedule.day}
-//           location={marketSchedule.location}
-//           hours={marketSchedule.hours}
-//           booth={marketSchedule.booth}
-//           key={index} />
-//       )}
-//     </div>
-//   );
-// }
-
-// //  <h3>{props.day}</h3>
-// <h4>{props.location}</h4>
-//   <p><em>{props.hours}</em></p>
-//   <p><em>{props.booth}</em></p>
