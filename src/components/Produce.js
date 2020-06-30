@@ -274,11 +274,13 @@ function Produce(props) {
   let monthsProduce = availableProduce[props.month].selection;
   return (
     <React.Fragment>
-      <p><b>Month:</b> {availableProduce[props.month].month}<br /></p>
-      <b>Crops:</b>
-      <ul>
-        {monthsProduce.map((element) => <li>{element}</li> )}
-      </ul>
+      <div class="crops">
+        <p><b>Month:</b> {availableProduce[props.month].month}<br /></p>
+        <b>Crops:</b>
+        <ul>
+          {monthsProduce.map((element) => <li>{element}</li> )}
+        </ul>
+      </div>
     </React.Fragment>
   );
 }
